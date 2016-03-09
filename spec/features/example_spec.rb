@@ -5,7 +5,12 @@ Warden.test_mode!
 
 # sleep(inspection_time=3)
 
-
+feature "Have Login", js:true, :sauce => true do
+  scenario "Have Login" do
+    visit 'http://anacapa-github-prototype.herokuapp.com/'
+    expect(page).to have_content 'Sign in with GitHub'
+  end
+end
 
 feature "Logging In", js: true, :sauce => true do
   before(:each) do
