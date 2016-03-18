@@ -26,5 +26,7 @@ Warden.test_mode!
 #   end
 # end
 feature "To get the test passed" do
-  expect(1) to eq(1)
+  scenario "1==1" do
+    expect(1).to eq(1)
+  end
 end
