@@ -4,7 +4,7 @@ rvm:
 script:
   - RAILS_ENV=test bundle exec rake db:migrate --trace
   - bundle exec rake db:test:prepare
-  - bundle exec rake spec
+  - bundle exec rake spec:features
 before_script:
   - psql -c 'create database anacapa_test;' -U postgres
   - bundle exec rake assets:precompile
