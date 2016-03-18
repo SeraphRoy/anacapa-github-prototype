@@ -6,5 +6,5 @@ script:
   bundle exec rake db:test:prepare
   bundle exec rake spec
 before_script:
-  psql -c 'create database myapp_test;' -U postgres
+  psql -c 'create database anacapa-test;' -U postgres
   bundle exec rake assets:precompile
